@@ -1,0 +1,40 @@
+.streamView
+{
+	display: flex;
+	background-color: black;
+	height: 400px;
+	width: auto;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.streamView-img
+{
+  width: 680px;
+  height: auto;
+}
+table {
+  border: 1px solid black;
+  height: auto;
+  width: auto;
+
+}
+.table-container-live > th, td {
+  border: 1px solid black;
+  height: auto;
+  width: auto;
+
+}
+.overlay {
+   visibility:hidden;
+  background-color: #555E5E;
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  bottom: 0;
+  opacity: 0.3;
+  transition: visibility 0.8s;
+
+}
+

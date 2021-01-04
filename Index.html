@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/containers.css">
+<link rel="stylesheet" href="css/streamview.css">
+<link rel="stylesheet" href="css/streamview.css">
+<link rel="stylesheet" href="css/blockItem.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/containerctrl.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="js/playback.js"></script>
+<script type="text/javascript" src="js/live.js"></script>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="header-container">
+			<div class="header-container-div1">
+				<div class="header-element-icon"><img src="img/icon.png" style="width:100%; height:50px;"></div>
+				<div class="header-element-tab">
+					<div class="header-element-tab-container" style="display: flex;justify-content: center;margin-left: 10px; margin-right: 1em;">
+						<div id= "tab-live-id" class="icon-tab" onclick="changeTabCtrl('liveId')" ><img  src="img/live.png" style="width:50px; height:50px;" ></div>
+						<div id= "tab-register-id" class="icon-tab" onclick="changeTabCtrl('registerId')"> <img  src="img/register.png" style="width:50px; height:50px;"></div>
+						<div id= "tab-manageCamera-id" class="icon-tab" onclick="changeTabCtrl('manageCameraId')"> <img  src="img/admin.png" style="width:50px; height:50px;"> </div>
+						<div id= "tab-playback-id" class="icon-tab" onclick="changeTabCtrl('playbackId')"> <img  src="img/playback.png" style="width:50px; height:50px;"> </div>
+						<div id= "tab-admin-id" class="icon-tab"> <img  src="img/admin.png" style="width:50px; height:50px;"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-container ">
+			<div id="liveId" class="table-container-live maincontainer" style="display: block;">
+				<table  style="width:100%">
+				  <tr>
+				  	<td>
+				 	 <b>LIVE STREAM</b>
+				 	</td>
+				  </tr>
+
+				  <tr>
+				  	<table style="width:100%">
+				  		<tr>
+				  			<td style="width:100px">
+							 	<div>
+							 		<label for="fname"> Group Name: </label>
+							 	</div>
+						 	</td>
+						 	<td>
+							 	<div>
+							 		<select name="example" style="width:150px;" onchange="genGroupItems(100)">
+									  <option value="A">A</option>
+									  <option value="B">B</option>
+									  <option value="-">Other</option>
+									</select>
+							 	</div>
+						 	</td>
+				  		</tr>
+				  	</table>
+				  </tr>
+				  
+				  <tr>
+					<td> 
+						<div id="live-block-container" class="block-wrapper block-pos" >
+						  <!--<div class="element element-1">
+						  	<div class="lbl0_live_txt"><a>Group 1</a></div>
+						  	<div class="lbl1_live_img" ><div class="lbl1_live_img_cam"><img  src="img/cam1.png" style="width:50px; height:50px;" ></div></div>
+						  	<div class="lbl2_live_txt">
+						  		<a>Cam: </a>
+						  		<a>7</a>
+						  	</div>
+						  	<div class="lbl2_live_txt">
+						  		<a>Live: </a>
+						  		<a>4</a>
+						  	</div>
+						  	<div class="lbl1_live_txt"><label>2020-12-04</label></div>
+						  </div>-->
+						  
+						</div>
+					</td>
+				 </tr>
+				</table>
+			</div>
+			
+			<div id="registerId" class="table-container-register maincontainer" style="  display:none;width:100%;">
+				<table  style="width:100%; height:100px;">
+				  <tr>
+				  	<td>
+				 		<b>Register Camera System<b>
+				 	</td>
+				  </tr>
+				  <tr>
+				 	<td>
+				 		Register Camera System
+				 	</td>
+				  </tr>
+				  <tr>
+				  	<td>
+				  	   <table  style="width:100%; height:100px;">
+				  	   	<tr>
+				  	   		<td style="width:150px;">
+				  	   				<label for="fname"> Group Id: </label><br><br>	
+								  	<label for="fname"> Group Name: </label><br><br>	
+								  	<label for="fname"> Address: </label><br><br>	
+								  	<label for="fname"> Group Id: </label><br><br>
+								  	<label for="fname"> Camera Number: </label><br><br>
+				  	   		</td>
+				  	   		<td>	  	   			
+								    <input type="text" id="fname" name="fname"><br><br>							 
+								    <input type="text" id="fname" name="fname"><br><br>		
+								    <input type="text" id="fname" name="fname"><br><br>		
+								    <input type="text" id="fname" name="fname"><br><br>
+								    <input type="text" id="fname" name="fname"><br><br>
+				  	   		</td>
+				  	   		<td>
+				  	   				<br><br>
+				  	   				<br><br>
+				  	   				<br><br>
+				  	   				<br><br>
+				  	   				<button onclick="createCamera(10);">hello</button>
+				  	   		</td>
+				  	   	</tr>
+				  	   </table>
+				 	  
+				 	</td>
+				  </tr>
+				  <tr>
+				 	<td>
+				 		Register Camera
+				 	</td>
+				  </tr>
+				  <tr>
+				  	<td>
+				 		<table id="tbRegCam" style="width:100%; height:100px;">
+				  	   	<tr>
+				  	   		<th>Camera ID</th>
+				  	   		<th>Address</th>
+				  	   		<th>Group ID</th>
+				  	   		<th>Status</th>
+				  	   		<th>Control</th>
+				  	   	</tr>
+				  	   	<tr>
+				  	   		<td>Camera ID</td>
+				  	   		<td>Address</td>
+				  	   		<td>Group ID</td>
+				  	   		<td>Status</td>
+				  	   		<td>Control</td>
+				  	   	</tr>
+				  	    <tr>
+				  	   		<td>Camera ID</td>
+				  	   		<td>Address</td>
+				  	   		<td>Group ID</td>
+				  	   		<td>Status</td>
+				  	   		<td>Control</td>
+				  	   	</tr>
+				  	   </table>
+				 	</td>
+				  </tr>
+				</table>
+			</div>
+
+			<div id="manageCameraId" class="table-container-manageCamera maincontainer" style="display:none;width:100%;">
+				<table style="width:100%; height:100px;">
+					<tr>
+						<td>
+							<b>Management Camera System</b>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<b>Management Camera System Twice</b>
+						</td>
+					</tr>
+
+					<tr>
+					  	<table style="width:100%">
+					  		<tr>
+					  			<td style="width:100px">
+								 	<div>
+								 		<label for="fname"> Group Name: </label>
+								 	</div>
+							 	</td>
+							 	<td>
+								 	<div>
+								 		<select name="example" style="width:150px;" onchange="genGroupItems(100)">
+										  <option value="A">A</option>
+										  <option value="B">B</option>
+										  <option value="-">Other</option>
+										</select>
+										<button type="submit"><i class="fa fa-search"></i></button>
+								 	</div>
+							 	</td>
+						</table>
+					</tr>
+					<tr>
+						<td>
+					 		<table id="tbMagCam" style="width:100%; height:100px;">
+					  	   	<tr>
+					  	   		<th>Camera ID</th>
+					  	   		<th>Address</th>
+					  	   		<th>Group ID</th>
+					  	   		<th>Status</th>
+					  	   		<th>Control</th>
+					  	   	</tr>
+					  	   	<tr>
+					  	   		<td>Camera ID</td>
+					  	   		<td>Address</td>
+					  	   		<td>Group ID</td>
+					  	   		<td>Status</td>
+					  	   		<td>Control</td>
+					  	   	</tr>
+					  	    <tr>
+					  	   		<td>Camera ID</td>
+					  	   		<td>Address</td>
+					  	   		<td>Group ID</td>
+					  	   		<td>Status</td>
+					  	   		<td>Control</td>
+					  	   	</tr>
+					  	   </table>
+				 		</td>
+				 	</tr>
+			</div>
+
+			<div id="playbackId" class="table-container-playback maincontainer" style="  display:none;width:100%;">
+				<table  style="width:100%; height:100px;">
+					<tr>
+					  	<td>
+					 		<b>Playback Video Recorded</b>
+					 	</td>
+				    </tr>
+				    <tr>
+					  	<td>
+					  		<table  style="width:100%; height:100px;">
+					  			<tr>
+								  	<td style="table-layout:fixed; width:320px; background-color: black;">
+								 		<video id="videoplbck" width="320px" height="280px" controls>
+										  <source src="http://118.68.94.9:8080/ServerStream/video" type="video/mp4">
+										  <source src="movie.ogg" type="video/ogg">
+										</video>
+								 	</td>
+								 	<td >
+								 		<div style="width:100%; height:100%;">
+									 		<table style="width:100%;height:100px;">
+									 			<tr>
+									 				<td style="width:100px;">
+									 					<label for="birthday">From:</label><br><br>
+				  										<label for="birthday">To:</label><br><br>
+									 					<label for="fname"> Group ID: </label><br><br>
+									  	   				<label for="fname"> Camera ID: </label><br><br>
+									 				</td>
+									 				<td>
+									 					<input type="date" id="birthday" name="birthday"><br><br>
+				  										<input type="date" id="birthday" name="birthday"><br><br>
+													    <input type="text" id="fname" name="fname">
+													    ​<button type="submit" onclick="playbackSearch(5)"><i class="fa fa-search"></i></button><br><br>
+													    <input type="text" id="fname" name="fname">
+													    ​<button type="submit"><i class="fa fa-search"></i></button><br><br>
+
+													    ​<br><br>
+									 				</td>
+									 			</tr>
+									 		</table>
+								 		</div>
+				  	   				</td>
+							    </tr>
+							</table>
+					 	</td>
+				    </tr>
+				    <tr>
+				  	<td>
+				 		<table id="tbPlaybackCam" style="width:100%; height:100px;">
+					  	   	<tr>
+					  	   		<th>Camera ID</th>
+					  	   		<th>Address</th>
+					  	   		<th>Path</th>
+					  	   		<th>Status</th>
+					  	   		<th>Control</th>
+					  	   	</tr>
+				  	   </table>
+				 	</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="leftside-container">
+			<div class="tree" style="display: block;">
+			</div>
+		</div>
+		<div class="footer-container">© Copyright</div>
+	</div>
+
+	<div id="id01" class="modal" onclick="closeGroup();">
+		<div id="liveItems" class="wrapper33">
+		<!--	<div class="streamView"  onmouseover="onHoverOn(1)" onmouseout="onHoverOut(1)" >
+							<img class="streamView-img" src="img/live.png">
+							<div id="overlay_controler1" class="overlay">
+								<table  style="width:100%; height:50px; border:none;">
+						  	   	<tr>
+						  	   		<td style="width:30px; border:none;"><div style="display: flex; justify-content: center;"><img src="img/pause.png" style="width:25px; height:25px;"></td>
+						  	   		<td style="width:30px; border:none;"><div style="display: flex; justify-content: center;"><img src="img/vl_s.png" style="width:25px; height:25px;"></div></td>
+						  	   		<td style="width:30px;border:none;"><div style="display: flex; justify-content: center; "><p style="color:white;">00:00</p></div></td>
+						  	   		<td style="width:30px;border:none;"></td>
+						  	   		<td style="width:auto;border:none;"><div style="display: flex"><p style="color:white;">Camera:</p></div></td>
+						  	   	</tr>
+						  	   </table>
+							</div>
+			</div>
+        -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

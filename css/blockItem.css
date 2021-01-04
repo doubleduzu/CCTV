@@ -1,0 +1,104 @@
+.block-item {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.block-wrapper {
+  display: inline-grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  height:900px;
+  grid-auto-rows: 140px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 950px;
+  overflow: auto;
+}
+
+.block-pos{
+    justify-content: center;
+}
+.element {
+
+    background-color: #FFFAFA;
+    color: white;
+    margin: 10px;
+    float: left;
+    width: 100px;
+    height: 120px;
+    padding: 10px;
+    position:relative;
+
+
+}
+.element-1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid black;
+}
+div.lbl0_live_txt
+{
+  width: 100%;
+  color: black;
+  text-align: center;
+  margin-bottom: 2px;
+  font-weight: bold;
+
+}
+div.lbl1_live_txt
+{
+  width: 100%;
+  color: black;
+  text-align: center;
+  margin-bottom: 2px;
+ }
+ div.lbl2_live_txt
+{
+  width: 100%;
+  color: black;
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 2px;
+ }
+ div.lbl1_live_img_cam
+{
+  width: 50px;
+  background-color: #d3d5e8;
+ }
+  div.lbl1_live_img
+{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+ }
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.wrapper33 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 410px;
+  overflow: auto;
+}
